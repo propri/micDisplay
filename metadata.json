@@ -1,6 +1,6 @@
 {
   "uuid": "micDisplay@propri",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "name": "MicDisplay",
   "description": "Displays my mic mute state",
   "author": "propri"

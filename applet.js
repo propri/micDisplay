@@ -21,6 +21,7 @@ MicDisplay.prototype = {
       instance_id,
     );
 
+    this.set_applet_label("Mic");
     this.updateMuted();
 
     this.startUp(true);
@@ -29,11 +30,9 @@ MicDisplay.prototype = {
   updateMuted: function () {
     if (muted) {
       this.set_applet_icon_name("micDisplay-muted");
-      this.set_applet_label("M");
       this.set_applet_tooltip(_("Microphone is muted"));
     } else {
       this.set_applet_icon_name("micDisplay-recording");
-      this.set_applet_label("R");
       this.set_applet_tooltip(_("Microphone is recording"));
     }
   },
@@ -63,7 +62,7 @@ MicDisplay.prototype = {
 
   updateLoop: function () {
     this.updateUI();
-    Mainloop.timeout_add_seconds(1, this.updateLoop.bind(this));
+    Mainloop.timeout_add(150, this.updateLoop.bind(this));
     this.updateMuted();
   },
 };
