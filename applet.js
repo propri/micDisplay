@@ -39,7 +39,7 @@ MicDisplay.prototype = {
 
   on_applet_clicked: function () {
     // switch muted state
-    Util.spawnCommandLine("/home/wilhelm/bin/tc30_mute_toggle.sh");
+    Util.spawnCommandLine("mic_mute_toggle.sh");
   },
 
   startUp: function (setupLoop) {
@@ -51,7 +51,7 @@ MicDisplay.prototype = {
   },
 
   updateUI: function () {
-    Util.spawn_async(["/home/wilhelm/bin/is_mic_muted.sh"], (stdout) => {
+    Util.spawn_async(["is_mic_muted.sh"], (stdout) => {
       if (stdout.indexOf("yes") > -1) {
         muted = true;
       } else {
