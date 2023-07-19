@@ -41,3 +41,9 @@ Make sure the scripts to mute / check for mute are in your path and executable.
 Copy this directory to `$HOME/.local/share/cinnamon/applets/`.
 
 You can now add the applet from the Applets application.
+
+# Usage
+
+If the microphone is muted, the applet displays a red icon, otherwise a grey icon is used.
+
+Clicking the applet will toggle the microphone mute.
